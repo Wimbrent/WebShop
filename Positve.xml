@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    
+    <test name="Register">
+        <classes>
+            <class name="Positive.Account.RegisterTest"/>
+        </classes>
+    </test>
+    
+    <test name="Logout after Registration">
+        <classes>
+            <class name="Positive.Account.LoginTest">
+                <methods>
+                    <include name="successfullyLogout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Forgotten Password">
+        <classes>
+            <class name="Positive.Account.ForgottenPasswordTest">
+                <methods>
+                    <include name="successfulResetPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Login">
+        <classes>
+            <class name="Positive.Account.LoginTest">
+                <methods>
+                    <include name="successfullyLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Edit your account information">
+        <classes>
+            <class name="Positive.AccountPages.MyAccount.EditYourAccountInformationTest">
+                <methods>
+                    <include name="successfullyEditYourAccountInformation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Change your password">
+        <classes>
+            <class name="Positive.AccountPages.MyAccount.ChangeYourPasswordTest">
+                <methods>
+                    <include name="successfullyChangePassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Logout after Change password">
+        <classes>
+            <class name="Positive.Account.LoginTest">
+                <methods>
+                    <include name="successfullyLogout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Login with new Login and Password">
+        <classes>
+            <class name="Positive.Account.LoginTest">
+                <methods>
+                    <include name="successfullyLoginWithNewLoginAndPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Modify your address: Edit">
+        <classes>
+            <class name="Positive.AccountPages.MyAccount.ModifyYourAddressBookEntriesTest">
+                <methods>
+                    <include name="editAddress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Modify your address: Add new Address">
+        <classes>
+            <class name="Positive.AccountPages.MyAccount.ModifyYourAddressBookEntriesTest">
+                <methods>
+                    <include name="addNewAddress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Modify your address: Delete Address">
+        <classes>
+            <class name="Positive.AccountPages.MyAccount.ModifyYourAddressBookEntriesTest">
+                <methods>
+                    <include name="successfullyDeletedAddress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Register for an Affiliate Account">
+        <classes>
+            <class name="Positive.AccountPages.RegisterForAnAffiliateAccountTest">
+                <methods>
+                    <include name="RegisterAffiliateAccount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Buy Product: Existing Address">
+        <parameter name="select_payment_address" value="0"/>
+        <parameter name="select_shipping_address" value="0"/>
+        <classes>
+            <class name="Positive.BuyProductTest">
+                <methods>
+                    <include name="Buy_ExistingAddress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Buy Product: New Address">
+        <classes>
+            <class name="Positive.BuyProductTest">
+                <methods>
+                    <include name="Buy_NewAddress"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Product Page">
+        <parameter name="select_payment_address" value="0"/>
+        <parameter name="select_shipping_address" value="0"/>
+        <classes>
+            <class name="Positive.ProductPage.TabletsTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.ProductPage.MP3PlayersTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.ProductPage.CamerasTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.ProductPage.PhonesAndPDAsTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.ProductPage.Components.MonitorsTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.ProductPage.Desktops.MacTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.ProductPage.LaptopsAndNotebooks.ShowAllLaptopsAndNotebooksTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Product Category Page">
+        <parameter name="select_payment_address" value="0"/>
+        <parameter name="select_shipping_address" value="0"/>
+        <classes>
+            <class name="Positive.Product.Desktops.MacTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.Product.LaptopsAndNotebooks.ShowAllLaptopsAndNotebooksTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.Product.Components.MonitorsTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.Product.PhonesAndPDAsTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.Product.MP3PlayersTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.Product.CamerasTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+            <class name="Positive.Product.TabletsTest">
+                <methods>
+                    <include name="AddToCartAndBuy"/>
+                    <include name="AddToCartAndRemove"/>
+                    <include name="AddToWishListAndBuy"/>
+                    <include name="AddToWishListAndRemove"/>
+                    <include name="CompareThisProductAndBuy"/>
+                    <include name="CompareThisProductAndRemove"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="View your order history: Reorder">
+        <parameter name="select_payment_address" value="0"/>
+        <parameter name="select_shipping_address" value="0"/>
+        <classes>
+            <class name="Positive.AccountPages.MyOrders.ViewYourOrderHistoryTest">
+                <methods>
+                    <include name="ReorderProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="View your order history: Return">
+        <parameter name="id" value="0"/>
+        <classes>
+            <class name="Positive.AccountPages.MyOrders.ViewYourOrderHistoryTest">
+                <methods>
+                    <include name="ReturnProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Downloads">
+        <classes>
+            <class name="Positive.AccountPages.MyOrders.DownloadsTest">
+                <methods>
+                    <include name="Downloads"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="View your Reward Points">
+        <classes>
+            <class name="Positive.AccountPages.MyOrders.YourRewardPointsTest">
+                <methods>
+                    <include name="YourRewardPoints"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="View your Return Request">
+        <classes>
+            <class name="Positive.AccountPages.MyOrders.ViewYourReturnRequestsTest">
+                <methods>
+                    <include name="ViewReturnRequest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Your Transactions">
+        <classes>
+            <class name="Positive.AccountPages.MyOrders.YourTransactionsTest">
+                <methods>
+                    <include name="YourTransactions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Your Recurring Payments">
+        <classes>
+            <class name="Positive.AccountPages.MyOrders.RecurringPaymentsTest">
+                <methods>
+                    <include name="RecurringPayments"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
