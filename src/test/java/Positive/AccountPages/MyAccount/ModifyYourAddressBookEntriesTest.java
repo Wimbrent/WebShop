@@ -3,6 +3,7 @@ package Positive.AccountPages.MyAccount;
 import Base.BaseTest;
 import Data.Information;
 import Data.NewInformation;
+import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
@@ -10,8 +11,9 @@ import org.testng.annotations.Test;
 
 public class ModifyYourAddressBookEntriesTest extends BaseTest {
 
-    @Test
     @Severity(SeverityLevel.CRITICAL)
+    @Description(value = "Successfully add new address")
+    @Test
     public void addNewAddress() throws InterruptedException {
         myAccountMenu.myAccountMenuOpen()
                      .linkToMyAccount();
@@ -30,8 +32,9 @@ public class ModifyYourAddressBookEntriesTest extends BaseTest {
         modifyYourAddressBookEntriesPage.clickButtonBack();
     }
 
-    @Test
     @Severity(SeverityLevel.CRITICAL)
+    @Description(value = "Successfully edit address")
+    @Test
     public void editAddress() throws InterruptedException {
         myAccountMenu.myAccountMenuOpen()
                      .linkToMyAccount();
@@ -50,6 +53,8 @@ public class ModifyYourAddressBookEntriesTest extends BaseTest {
         modifyYourAddressBookEntriesPage.clickButtonBack();
     }
 
+    @Severity(SeverityLevel.NORMAL)
+    @Description(value = "Successfully deleted address")
     @Test
     public void successfullyDeletedAddress() {
         myAccountMenu.myAccountMenuOpen()

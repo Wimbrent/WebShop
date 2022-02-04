@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class RegisterForAnAffiliateAccountTest extends BaseTest {
 
     @Severity(SeverityLevel.CRITICAL)
-    @Description(value = "Register Affiliate Account")
+    @Description(value = "Register for an affiliate account")
     @Test
     public void RegisterAffiliateAccount() {
         accountPage.linkToRegisterForAnAffiliateAccount();
